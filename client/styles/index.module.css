@@ -1,13 +1,13 @@
-.navbar{
-    /* background:orange; */
-
+.navbar {
+    background:orange;
 }
-.nav_color{
+.nav_color {
     background-color: black;
-    padding:15px;
-    position: fixed;
+    padding: 15px;
+    position: sticky;
+    top: 0;
 }
-.link{
+.link {
     text-decoration: none;
     color: white;
     font-size: 20px;

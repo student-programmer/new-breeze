@@ -15,7 +15,7 @@ const MainContainer = ({ children, keywords, title }: Props) => {
 				<meta></meta>
 				<title>{title}</title>
 			</Head>
-			<Header />
+			<Header/>
 			<div>{children}</div>
 		</>
 	);
