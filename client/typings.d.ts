@@ -4,3 +4,8 @@ export interface ITodos {
 	title: string;
 	completed: boolean;
 }
+
+export interface IBanner {
+	status: 'string';
+	message: 'string';
+}

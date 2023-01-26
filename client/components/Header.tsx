@@ -26,6 +26,9 @@ function Header() {
                 <Link href='/task' className={styles.link}>
                     Форма
                 </Link>
+                <Link href='/connection' className={styles.link}>
+                    Заявка
+                </Link>
             </div>
         </header>
     );

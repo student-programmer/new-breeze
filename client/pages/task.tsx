@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import MainContainer from '../components/MainContainer';
 import requests from '../utils/requests';
-import { ITodos } from './type';
+import { ITodos } from '../typings';
 interface Props {
 	fetchingTodos: ITodos[];
 }
