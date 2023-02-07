@@ -69,9 +69,10 @@ function Connection() {
 	// Функция для отправки формы
 	const submitData:
 		| React.MouseEventHandler<HTMLButtonElement>
-		| undefined | string = e => {
+		| undefined
+		| string = async e => {
 		e.preventDefault();
-		fetch(' http://localhost:5000/telegram', {
+		await fetch(' http://localhost:5000/telegram', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -79,7 +80,7 @@ function Connection() {
 			body: JSON.stringify({ name, email, phone, description }),
 		})
 			.then(response => response.json())
-			.then(result => console.log(result.response))
+			.then(result => console.log(result.response));
 	};
 
 
@@ -97,9 +98,9 @@ function Connection() {
 			default:
 		}
 	};
-	return (    
+	return (
 		<MainContainer keywords={'обработка заявок'} title='Заявка'>
-			<div className={con.wrapper }>
+			<div className={con.wrapper}>
 				<div className={con.login_box}>
 					<h2>Заявка</h2>
 					<form>
@@ -149,7 +150,6 @@ function Connection() {
 								name='description'
 								placeholder='Комментарий...'
 								value={description}
-								id=''
 							></textarea>
 						</div>
 						<button disabled={!formValid} type='submit' onClick={submitData}>
